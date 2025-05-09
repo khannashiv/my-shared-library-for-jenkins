@@ -5,14 +5,14 @@
 ![](images/Jenkins-repo-1.png "Jenkins-repo-1")
 ![](images/Jenkins-repo-2.png "Jenkins-repo-2")
 
-**Configuration of Shared library repo.**
+- **Configuration of Shared library repo.**
 
 ![](images/Shared-lib-repo-1.png "Shared-repo-1")
 ![](images/Shared-lib-repo-2.png "Shared-repo-2")
 ![](images/Shared-lib-repo-3.png "Shared-repo-3")
 
 
-**Outcome of Jenkins pipeline.**
+- **Outcome of Jenkins pipeline.**
 
 ![](images/Pipeline-outcome-1.png "Pipeline-outcome-1")
 ![](images/Pipeline-outcome-2.png "Pipeline-outcome-2")
