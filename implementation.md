@@ -1,6 +1,6 @@
 ## Implementation of Shared Library through simple demonstration .
 
-**Configuration of Jenkins repo.**
+- **Configuration of Jenkins repo.**
 
 ![](images/Jenkins-repo-1.png "Jenkins-repo-1")
 ![](images/Jenkins-repo-2.png "Jenkins-repo-2")
