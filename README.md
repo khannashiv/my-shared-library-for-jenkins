@@ -74,13 +74,13 @@
     - Shared Library Repository Structure : This is the Git repository where your shared library lives.
 
         my-first-shared-library/
-            ├── vars/                           # Global functions or scripts
-            │   └── testSharedLibrary.groovy    # Function callable from Jenkinsfile
-            ├── src/                            # Optional Java/Groovy packages
+            ├── vars/                                
+            │   └── testSharedLibrary.groovy
+            ├── src/         
             │   └── org/
             │       └── example/
             │           └── Helper.groovy
-            └── README.md                       # Optional
+            └── README.md                              
 
             
         Example: vars/testSharedLibrary.groovy
