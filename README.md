@@ -71,7 +71,7 @@
 
 - There are two parts to configuration .
 
-    1. Shared Library Repository Structure : This is the Git repository where your shared library lives.
+    - Shared Library Repository Structure : This is the Git repository where your shared library lives.
 
         my-first-shared-library/
             ├── vars/                           # Global functions or scripts
