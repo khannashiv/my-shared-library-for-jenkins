@@ -1,0 +1,15 @@
+The recommended git tool is: git
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Test/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/khannashiv/Jenkins-Practice # timeout=10
+Fetching upstream changes from https://github.com/khannashiv/Jenkins-Practice
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/khannashiv/Jenkins-Practice +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 1141ea5cb55f3a3ec44e96deb3edcec0dd6085dc (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1141ea5cb55f3a3ec44e96deb3edcec0dd6085dc # timeout=10
+Commit message: "test"
+ > git rev-list --no-walk 1141ea5cb55f3a3ec44e96deb3edcec0dd6085dc # timeout=10

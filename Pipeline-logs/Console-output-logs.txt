@@ -1,0 +1,93 @@
+Started by user admin
+Obtained Jenkinsfile from git https://github.com/khannashiv/Jenkins-Practice
+Loading library my-first-shared-library@main
+Attempting to resolve main from remote references...
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git ls-remote -h -- https://github.com/khannashiv/my-shared-library-for-jenkins.git # timeout=10
+Found match: refs/heads/main revision 0d3f88981e71813379676aec670f7b7816a5339c
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Test@libs/32ff34caa08b4312f145dde7a4c866ec6cf22140067fba0c66d1e9c98e1fb559/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/khannashiv/my-shared-library-for-jenkins.git # timeout=10
+Fetching without tags
+Fetching upstream changes from https://github.com/khannashiv/my-shared-library-for-jenkins.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --no-tags --force --progress -- https://github.com/khannashiv/my-shared-library-for-jenkins.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking out Revision 0d3f88981e71813379676aec670f7b7816a5339c (main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 0d3f88981e71813379676aec670f7b7816a5339c # timeout=10
+Commit message: "test"
+ > git rev-list --no-walk 0d3f88981e71813379676aec670f7b7816a5339c # timeout=10
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in /var/lib/jenkins/workspace/Test
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Declarative: Checkout SCM)
+[Pipeline] checkout
+The recommended git tool is: git
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/Test/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/khannashiv/Jenkins-Practice # timeout=10
+Fetching upstream changes from https://github.com/khannashiv/Jenkins-Practice
+ > git --version # timeout=10
+ > git --version # 'git version 2.43.0'
+ > git fetch --tags --force --progress -- https://github.com/khannashiv/Jenkins-Practice +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision 1141ea5cb55f3a3ec44e96deb3edcec0dd6085dc (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1141ea5cb55f3a3ec44e96deb3edcec0dd6085dc # timeout=10
+Commit message: "test"
+ > git rev-list --no-walk 1141ea5cb55f3a3ec44e96deb3edcec0dd6085dc # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] withEnv
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Test-Shared-Library)
+[Pipeline] echo
+Testing shared libraries in jenkins.
+[Pipeline] sh
++ echo  What is my present working directory.
+ What is my present working directory.
++ pwd
+/var/lib/jenkins/workspace/Test
++ echo List all the files and folders in present working directory.
+List all the files and folders in present working directory.
++ ls -al
+total 24
+drwxr-xr-x 5 jenkins jenkins 4096 May  9 09:00 .
+drwxr-xr-x 5 jenkins jenkins 4096 May  9 09:00 ..
+drwxr-xr-x 8 jenkins jenkins 4096 May  9 09:10 .git
+-rw-r--r-- 1 jenkins jenkins  207 May  9 09:00 Jenkinsfile
+drwxr-xr-x 3 jenkins jenkins 4096 May  9 09:00 Project-1
+drwxr-xr-x 5 jenkins jenkins 4096 May  9 09:00 Project-2
++ echo Checking disk space alloted to OS.
+Checking disk space alloted to OS.
++ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  3.0G  3.8G  44% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  896K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M   79M  741M  10% /boot
+/dev/xvda15     105M  6.1M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
++ echo  Checking avaiable menory on the system
+ Checking avaiable menory on the system
++ free -m
+               total        used        free      shared  buff/cache   available
+Mem:             957         842         110           0         160         114
+Swap:              0           0           0
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // withEnv
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS

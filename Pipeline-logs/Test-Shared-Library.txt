@@ -1,0 +1,32 @@
+Testing shared libraries in jenkins.
++ echo  What is my present working directory.
+ What is my present working directory.
++ pwd
+/var/lib/jenkins/workspace/Test
++ echo List all the files and folders in present working directory.
+List all the files and folders in present working directory.
++ ls -al
+total 24
+drwxr-xr-x 5 jenkins jenkins 4096 May  9 09:00 .
+drwxr-xr-x 5 jenkins jenkins 4096 May  9 09:00 ..
+drwxr-xr-x 8 jenkins jenkins 4096 May  9 09:10 .git
+-rw-r--r-- 1 jenkins jenkins  207 May  9 09:00 Jenkinsfile
+drwxr-xr-x 3 jenkins jenkins 4096 May  9 09:00 Project-1
+drwxr-xr-x 5 jenkins jenkins 4096 May  9 09:00 Project-2
++ echo Checking disk space alloted to OS.
+Checking disk space alloted to OS.
++ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root       6.8G  3.0G  3.8G  44% /
+tmpfs           479M     0  479M   0% /dev/shm
+tmpfs           192M  896K  191M   1% /run
+tmpfs           5.0M     0  5.0M   0% /run/lock
+/dev/xvda16     881M   79M  741M  10% /boot
+/dev/xvda15     105M  6.1M   99M   6% /boot/efi
+tmpfs            96M   12K   96M   1% /run/user/1000
++ echo  Checking avaiable menory on the system
+ Checking avaiable menory on the system
++ free -m
+               total        used        free      shared  buff/cache   available
+Mem:             957         842         110           0         160         114
+Swap:              0           0           0
